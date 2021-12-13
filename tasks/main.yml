@@ -10,7 +10,7 @@
       paths:
         - '{{ role_path }}/vars'
 - name: check for install in {{ dragonfly2_install_dir }}'
-  become: yes
+  become: true
   stat:
     path: '{{ dragonfly2_install_dir }}'
   register: dragonfly2_binary

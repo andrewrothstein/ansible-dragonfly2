@@ -7,4 +7,3 @@ dragonfly2_url: '{{ dragonfly2_mirror }}/v{{ dragonfly2_ver }}/{{ dragonfly2_arc
 dragonfly2_tmp_archive: /tmp/{{ dragonfly2_archive }}
 dragonfly2_checksum: '{{ dragonfly2_checksums[dragonfly2_ver][dragonfly2_platform] }}'
 dragonfly2_install_dir: '{{ dragonfly2_parent_install_dir }}/{{ dragonfly2_name }}'
-
