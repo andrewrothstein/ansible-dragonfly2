@@ -1,0 +1,10 @@
+---
+# vars file for dragonfly2
+dragonfly2_platform: '{{ dragonfly2_os }}-{{ dragonfly2_arch }}'
+dragonfly2_name: Dragonfly2-{{ dragonfly2_ver }}-{{ dragonfly2_platform }}
+dragonfly2_archive: '{{ dragonfly2_name }}.tar.gz'
+dragonfly2_url: '{{ dragonfly2_mirror }}/v{{ dragonfly2_ver }}/{{ dragonfly2_archive }}'
+dragonfly2_tmp_archive: /tmp/{{ dragonfly2_archive }}
+dragonfly2_checksum: '{{ dragonfly2_checksums[dragonfly2_ver][dragonfly2_platform] }}'
+dragonfly2_install_dir: '{{ dragonfly2_parent_install_dir }}/{{ dragonfly2_name }}'
+

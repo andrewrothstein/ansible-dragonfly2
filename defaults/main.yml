@@ -1,0 +1,19 @@
+---
+# defaults file for dragonfly2
+dragonfly2_ver: 2.0.1
+dragonfly2_os: linux
+dragonfly2_arch: amd64
+dragonfly2_mirror: https://github.com/dragonflyoss/Dragonfly2/releases/download
+dragonfly2_parent_install_dir: /usr/local
+dragonfly2_apps:
+  - cdn
+  - dfget
+  - manager
+  - scheduler
+dragonfly2_checksums:
+  # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.0.1/checksums.txt
+  '2.0.1':
+    # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.0.1/Dragonfly2-2.0.1-darwin-amd64.tar.gz
+    darwin-amd64: sha256:1335e5ca15d3272d429c15068e344ce7788708ab8e5a8593e1383512ef3bd32e
+    # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.0.1/Dragonfly2-2.0.1-linux-amd64.tar.gz
+    linux-amd64: sha256:852b5e8307e4f7fa0a44b7fc9892be7ab7c69c1fc7331e7c442b919ef387c082

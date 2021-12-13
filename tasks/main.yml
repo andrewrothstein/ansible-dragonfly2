@@ -1,0 +1,57 @@
+---
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- name: check for install in {{ dragonfly2_install_dir }}'
+  become: yes
+  stat:
+    path: '{{ dragonfly2_install_dir }}'
+  register: dragonfly2_binary
+  changed_when: false
+- when: not dragonfly2_binary.stat.exists
+  block:
+    - name: download {{ dragonfly2_url }} to {{ dragonfly2_tmp_archive }}
+      become: true
+      become_user: root
+      get_url:
+        url: '{{ dragonfly2_url }}'
+        dest: '{{ dragonfly2_tmp_archive }}'
+        mode: 0644
+        checksum: '{{ dragonfly2_checksum }}'
+    - name: mkdir {{ dragonfly2_install_dir }}
+      become: true
+      become_user: root
+      file:
+        path: '{{ dragonfly2_install_dir }}'
+        state: directory
+        mode: 0755
+    - name: unarchive {{ dragonfly2_tmp_archive }} to {{ dragonfly2_install_dir }}
+      become: true
+      become_user: root
+      unarchive:
+        remote_src: true
+        src: '{{ dragonfly2_tmp_archive }}'
+        dest: '{{ dragonfly2_install_dir }}'
+        creates: '{{ dragonfly2_install_dir }}/dfget'
+  always:
+    - name: rm {{ dragonfly2_tmp_archive }}'
+      become: true
+      become_user: root
+      file:
+        path: '{{ dragonfly2_tmp_archive }}'
+        state: absent
+- name: linking apps
+  become: true
+  become_user: root
+  with_items: '{{ dragonfly2_apps }}'
+  file:
+    src: '{{ dragonfly2_install_dir }}/{{ item }}'
+    dest: '{{ dragonfly2_parent_install_dir }}/bin/{{ item }}'
+    state: link
