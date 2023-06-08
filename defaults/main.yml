@@ -1,6 +1,6 @@
 ---
 # defaults file for dragonfly2
-dragonfly2_ver: 2.0.7
+dragonfly2_ver: 2.0.9
 dragonfly2_arch_map:
   aarch64: arm64
   arm64: arm64
