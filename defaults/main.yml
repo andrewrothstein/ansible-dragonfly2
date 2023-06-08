@@ -24,3 +24,23 @@ dragonfly2_checksums:
     linux-amd64: sha256:6a36650c8459c6febb7ae8be1e940f9e6e3ad8e62076b510e3cc2a425f1a5f17
     # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.0.7/dragonfly-2.0.7-linux-arm64.tar.gz
     linux-arm64: sha256:c842309555462faa6460199264a232b151be0f6664b96796f5fa4d2db84874a1
+  # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.0.8/checksums.txt
+  '2.0.8':
+    # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.0.8/dragonfly-2.0.8-darwin-amd64.tar.gz
+    darwin-amd64: sha256:514bc212911b7f925182117be77edce83f83e89f85dc42780166eed26b3d0171
+    # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.0.8/dragonfly-2.0.8-darwin-arm64.tar.gz
+    darwin-arm64: sha256:6473fdcccb417abb0ab810ba5727bc1213868c919734473dfeffe16d13d70773
+    # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.0.8/dragonfly-2.0.8-linux-amd64.tar.gz
+    linux-amd64: sha256:3946692c043236fda159d9097832ed48c8edbeeb42486112918f8813098300e9
+    # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.0.8/dragonfly-2.0.8-linux-arm64.tar.gz
+    linux-arm64: sha256:3f3545b7a3dd617005b901e1ba4bf34210c4e54ee0053687247c578f1d00d28d
+  # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.0.9/checksums.txt
+  '2.0.9':
+    # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.0.9/dragonfly-2.0.9-darwin-amd64.tar.gz
+    darwin-amd64: sha256:796f846acd9b97a92e9d80ac577d879cb8fb18ee71e0a50633d33fa0e01e6b8b
+    # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.0.9/dragonfly-2.0.9-darwin-arm64.tar.gz
+    darwin-arm64: sha256:4cb290c06aa17d1b48aef4ff352c29ff21998d408b685d1662c816dca8e9a19d
+    # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.0.9/dragonfly-2.0.9-linux-amd64.tar.gz
+    linux-amd64: sha256:10f9da177ff729f91bf217d6578499c50b56cc9e69f346e7b9576e85b9ba2780
+    # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.0.9/dragonfly-2.0.9-linux-arm64.tar.gz
+    linux-arm64: sha256:9e6a53a0004383f0b80889157ad5b00122d4ae5e0be22b08a7b703ae2b288538
