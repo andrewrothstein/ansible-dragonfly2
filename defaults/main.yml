@@ -1,6 +1,6 @@
 ---
 # defaults file for dragonfly2
-dragonfly2_ver: 2.0.9
+dragonfly2_ver: 2.1.54
 dragonfly2_arch_map:
   aarch64: arm64
   arm64: arm64
@@ -44,3 +44,13 @@ dragonfly2_checksums:
     linux-amd64: sha256:10f9da177ff729f91bf217d6578499c50b56cc9e69f346e7b9576e85b9ba2780
     # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.0.9/dragonfly-2.0.9-linux-arm64.tar.gz
     linux-arm64: sha256:9e6a53a0004383f0b80889157ad5b00122d4ae5e0be22b08a7b703ae2b288538
+  # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.1.54/checksums.txt
+  '2.1.54':
+    # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.1.54/dragonfly-2.1.54-darwin-amd64.tar.gz
+    darwin-amd64: sha256:a609b1080db71e69c8fa04e0e95292c640799344ad5b15f759524012cdee90e0
+    # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.1.54/dragonfly-2.1.54-darwin-arm64.tar.gz
+    darwin-arm64: sha256:ef0fcdc19c0bb7816aebee00d6b74326dfcf310806b39f983d00de4b088d043c
+    # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.1.54/dragonfly-2.1.54-linux-amd64.tar.gz
+    linux-amd64: sha256:7d64a6bcc330e0e606efb9696dab615369483a545be795d6885714bd56046ad3
+    # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.1.54/dragonfly-2.1.54-linux-arm64.tar.gz
+    linux-arm64: sha256:2aaabc5d1e604586a4a0416756cbc111b22b0b900c10944b55584adbd3d4c267

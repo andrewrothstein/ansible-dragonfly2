@@ -1,10 +1,13 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.dragonfly2
+  hosts: all
   roles:
-  - role: '{{ playbook_dir }}'
+    - role: '{{ playbook_dir }}'
   tasks:
-  - command: /usr/local/bin/dfget version
-    register: dfget_test_output
-  - name: dfget version
-    debug:
-      msg: '{{ dfget_test_output.stdout }}'
+    - name: Executing 'dfget version'
+      ansible.builtin.command: /usr/local/bin/dfget version
+      changed_when: false
+      register: dfget_test_output
+    - name: Output from 'dfget version'
+      ansible.builtin.debug:
+        msg: '{{ dfget_test_output.stdout }}'
