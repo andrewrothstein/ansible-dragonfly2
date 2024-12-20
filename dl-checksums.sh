@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -e
 DIR=~/Downloads
-MIRROR=https://github.com/dragonflyoss/Dragonfly2/releases/download
+MIRROR=https://github.com/dragonflyoss/dragonfly/releases/download
 
 dl() {
     local ver=$1
@@ -18,7 +18,7 @@ dl() {
 
 dl_ver() {
     local ver=$1
-    # https://github.com/dragonflyoss/Dragonfly2/releases/download/v2.0.1/checksums.txt
+    # https://github.com/dragonflyoss/dragonfly/releases/download/v2.1.66/checksums.txt
     local url=$MIRROR/v$ver/checksums.txt
     local lchecksums="${DIR}/dragonfly2_${ver}_checksums.txt"
     if [ ! -e $lchecksums ];
@@ -35,4 +35,4 @@ dl_ver() {
     dl $ver $lchecksums linux arm64
 }
 
-dl_ver ${1:-2.1.55}
+dl_ver ${1:-2.1.66}
